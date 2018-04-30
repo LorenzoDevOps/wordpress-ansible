@@ -16,7 +16,7 @@
 
 - name: Affichage MDP
   debug:
-    msg: "MDP : {{mysql_root_pass}}"
+    msg: "MDP : {{ mysql_root_pass }}"
 
 - name: write .my.cnf file in root directory
   template: src=my.cnf.j2 dest=/root/.my.cnf mode=0600
