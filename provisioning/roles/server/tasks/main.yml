@@ -9,8 +9,6 @@
     - curl
     - curl-devel
     - epel-release
-    - php
-    - php-opcache
 
 - name: Get mysql community edition
   yum:  name=http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm

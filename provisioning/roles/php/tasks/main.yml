@@ -2,14 +2,7 @@
 - name: Install PHP other packages
   yum: name={{ item }} state=present
   with_items:
-    - php-mysqlnd
-    - php-pdo
+    - php
     - php-gd
-    - php-ldap
-    - php-odbc
     - php-pear
-    - php-xml
-    - php-xmlrpc
-    - php-mbstring
-    - php-soap
-    - phpMyAdmin
+    - php-mysql
