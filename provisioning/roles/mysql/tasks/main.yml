@@ -17,7 +17,7 @@
               password={{ mysql_root_pass }}
               priv='*.*:ALL,GRANT'
               login_user=root
-              login_password={{ mysql_root_pass }}
+              login_password=""
               state=present
   with_items:
     #- "{{ ansible_default_ipv4.address }}"
