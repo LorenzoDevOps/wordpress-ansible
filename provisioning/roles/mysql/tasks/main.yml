@@ -27,14 +27,14 @@
   debug:
     msg: "MDP : {{ mysql_root_pass }}"
 
-- name: add var/lib/awx folder
-  file:
-    path: '/var/lib/awx/'
-    state: directory
+#- name: add var/lib/awx folder
+#  file:
+#    path: '/var/lib/awx/'
+#    state: directory
 
 - name: write .my.cnf file in root directory
-# template: src=my.cnf.j2 dest=/root/.my.cnf mode=0600
-  template: src=my.cnf.j2 dest=/var/lib/awx/.my.cnf mode=777
+  template: src=my.cnf.j2 dest=/root/.my.cnf mode=0600
+# template: src=my.cnf.j2 dest=/var/lib/awx/.my.cnf mode=600
 
 - name: Remove anonymous users
   mysql_user: name="" state=absent
