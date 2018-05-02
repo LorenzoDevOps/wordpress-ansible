@@ -23,6 +23,7 @@
     #- ::1
   ignore_errors: yes
 
+
 - name: Affichage MDP
   debug:
     msg: "MDP : {{ mysql_root_pass }}"
@@ -35,8 +36,6 @@
 - name: write .my.cnf file in root directory
   template: src=my.cnf.j2 dest=/root/.my.cnf owner=root group=root mode=0640
 # template: src=my.cnf.j2 dest=/var/lib/awx/.my.cnf owner=root group=root mode=0640
-  notify:
-    - restart mysql
 
 - name: Remove anonymous users
   mysql_user: name="" state=absent
