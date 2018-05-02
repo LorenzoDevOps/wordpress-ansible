@@ -10,7 +10,7 @@
   yum: name=MySQL-python state=present
 
 - name: start mysql CE
-  service: name=mysqld  state=started
+  service: name=mysql state=started
 
 - name: set the root password
   mysql_user: name=root host="{{item}}"
@@ -21,8 +21,8 @@
               state=present
   with_items:
     #- "{{ ansible_default_ipv4.address }}"
-    #- localhost
-    - 172.20.12.101
+    - localhost
+    #- 172.20.12.101
     #- 127.0.0.1
     #- ::1
   ignore_errors: yes
@@ -42,7 +42,7 @@
 # template: src=my.cnf.j2 dest=/var/lib/awx/.my.cnf owner=root group=root mode=0640
 
 - name: restart mysql CE
-  service: name=mysqld  state=restarted
+  service: name=mysql state=restarted
 
 - name: Remove anonymous users
   mysql_user: name="" state=absent
