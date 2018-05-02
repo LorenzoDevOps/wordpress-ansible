@@ -26,8 +26,13 @@
              dest=/tmp/
              remote_src=True
 
+#- name: remove htm folder
+#  command:  /usr/bin/rm -Rf /var/www/html
+
 - name: remove htm folder
-  command:  /usr/bin/rm -Rf /var/www/html
+  file:
+    path: '/var/www/html'
+    state: absent
 
 - name: move wordpress
   command: /usr/bin/mv  /tmp/wordpress /var/www/html

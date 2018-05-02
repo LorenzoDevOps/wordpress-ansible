@@ -1,4 +1,7 @@
 ---
+- name: Yum update
+  yum: name=* state=latest
+
 - name: Install PHP other packages
   yum: name={{ item }} state=present
   with_items:

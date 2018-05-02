@@ -2,7 +2,7 @@
 - hosts: all
   become: true
   roles:
-    - { role: mysql, tags: mysql }
     - { role: php, tags: php }
     - { role: server, tags: web }
+    - { role: mysql, tags: mysql }
     - { role: wordpress, tags: wordpress }

@@ -1,1 +1,2 @@
 127.0.0.1 ansible_host=127.0.0.1 ansible_user=centos ansible_ssh_private_key_file='/home/lorenzo/.ssh/id_rsa'
+# centos ansible_host=164.132.182.59 ansible_user=centos ansible_ssh_private_key_file='/home/lorenzo/.ssh/id_rsa'
