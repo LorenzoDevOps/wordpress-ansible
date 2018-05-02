@@ -20,8 +20,9 @@
               login_password={{ mysql_root_pass }}
               state=present
   with_items:
-    - "{{ ansible_default_ipv4.address }}"
+    #- "{{ ansible_default_ipv4.address }}"
     #- localhost
+    - 172.20.12.101
     #- 127.0.0.1
     #- ::1
   ignore_errors: yes
