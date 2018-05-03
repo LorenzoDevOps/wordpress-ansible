@@ -37,7 +37,7 @@
 #    state: directory
 
 - name: write .my.cnf file in root directory
-  template: src=.my.cnf.j2 dest=/root/.my.cnf mode=0600
+  template: src=.my.cnf.j2 dest=/root/.my.cnf owner=centos group=centos mode=0600
 # template: src=my.cnf.j2 dest=/var/lib/awx/.my.cnf owner=root group=root mode=0640
 
 - name: restart mysql CE
